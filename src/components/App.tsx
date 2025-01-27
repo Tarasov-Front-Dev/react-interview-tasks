@@ -1,10 +1,12 @@
 import { useDebauncer, useThrottle } from "hooks"
 import { SlotMachine } from "./slot-machine"
+import { TravelPlan } from "./travel-plan"
 
 function App() {
     const fn = () => console.log(new Date(Date.now()).getSeconds())
     const throttledFn = useThrottle(fn, 2_000)
     const debauncedFn = useDebauncer(fn, 2_000)
+
     return (
         <>
             <div className="mb-4 flex max-w-fit flex-col gap-4 p-4">
@@ -17,6 +19,9 @@ function App() {
             </div>
             <div className="my-8 px-8">
                 <SlotMachine />
+            </div>
+            <div className="my-8 px-8">
+                <TravelPlan />
             </div>
         </>
     )
