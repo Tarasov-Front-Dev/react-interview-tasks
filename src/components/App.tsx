@@ -1,6 +1,5 @@
 import { useDebauncer, useThrottle } from "hooks"
-import { SlotMachine } from "./slot-machine"
-import { TravelPlan } from "./travel-plan"
+import { ReducerExercise2 } from "./reducer-exercise2"
 
 function App() {
     const fn = () => console.log(new Date(Date.now()).getSeconds())
@@ -17,12 +16,13 @@ function App() {
                     DebauncedFn
                 </button>
             </div>
-            <div className="my-8 px-8">
+            {/* <div className="my-8 px-8">
                 <SlotMachine />
             </div>
             <div className="my-8 px-8">
                 <TravelPlan />
-            </div>
+            </div> */}
+            <ReducerExercise2 />
         </>
     )
 }
