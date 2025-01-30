@@ -10,7 +10,6 @@ const CheckBox = memo(function CheckBox({ checked, onChange }: CheckBoxProps) {
         <input
             name='checkbox'
             type='checkbox'
-            defaultChecked={checked}
             checked={checked}
             onChange={onChange}
         />

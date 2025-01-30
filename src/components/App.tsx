@@ -1,4 +1,7 @@
 import { useDebauncer, useThrottle } from "hooks"
+import { ThemeContextProvider } from "./filter-user-list/context/themeContext"
+import { FilterUserList } from "./filter-user-list/Filter"
+import { EventsPage } from "./list"
 import { ReducerExercise2 } from "./reducer-exercise2"
 
 function App() {
@@ -7,7 +10,7 @@ function App() {
     const debauncedFn = useDebauncer(fn, 2_000)
 
     return (
-        <>
+        <div className="px-8">
             <div className="mb-4 flex max-w-fit flex-col gap-4 p-4">
                 <button className="rounded-xl border bg-purple-600 px-4 py-2 text-lg font-bold text-neutral-50 transition-all active:bg-purple-700" onClick={throttledFn}>
                     ThrottledFn
@@ -23,7 +26,12 @@ function App() {
                 <TravelPlan />
             </div> */}
             <ReducerExercise2 />
-        </>
+            <EventsPage />
+
+            <ThemeContextProvider>
+                <FilterUserList />
+            </ThemeContextProvider>
+        </div>
     )
 }
 
