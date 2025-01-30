@@ -13,6 +13,7 @@ export const FilterUserList = () => {
     const [sortOrder, setSortOder] = useState<'asc' | 'des' | undefined>()
     const { theme, toggleTheme } = useThemeContex()
     const footerElRef = useRef(null)
+    const didMountRef = useRef(false)
     const debouncedFetchUsers = useDebounce(fetchUsers, 2_000)
 
     const throttledFn = (val: number) => {
@@ -50,18 +51,19 @@ export const FilterUserList = () => {
     }, [filteredUsers, sortOrder])
 
     useEffect(() => {
-        let observer: IntersectionObserver
-        if (footerElRef.current) {
+        let observer: IntersectionObserver | undefined = undefined
+        if (footerElRef.current && didMountRef.current) {
             observer = new IntersectionObserver((entries) => {
                 if (entries[0].intersectionRatio <= 0) return
-
                 console.log('LOAD MORE ITEMS')
             })
 
             observer.observe(footerElRef.current)
         }
 
-        return () => observer.disconnect()
+        didMountRef.current = true
+
+        return () => observer?.disconnect()
     }, [])
 
     return (

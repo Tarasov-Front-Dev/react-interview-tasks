@@ -14,7 +14,7 @@ type ThemeContextProviderProps = {
     children: ReactNode
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({})
+export const ThemeContext = createContext<ThemeContextProps | null>(null)
 
 export const useThemeContex = () => useContext(ThemeContext)
 
