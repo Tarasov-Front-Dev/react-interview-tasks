@@ -1,6 +1,7 @@
 import { useDebauncer, useThrottle } from "hooks"
 import { ThemeContextProvider } from "./filter-user-list/context/themeContext"
 import { FilterUserList } from "./filter-user-list/Filter"
+import { Lexical } from "./lexical"
 import { EventsPage } from "./list"
 import { ReducerExercise2 } from "./reducer-exercise2"
 import { TrafficLight } from "./traffic-light"
@@ -33,6 +34,7 @@ function App() {
             <ThemeContextProvider>
                 <FilterUserList />
             </ThemeContextProvider>
+            <Lexical />
         </div>
     )
 }
