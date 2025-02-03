@@ -4,6 +4,7 @@ import { FilterUserList } from "./filter-user-list/Filter"
 import { Lexical } from "./lexical"
 import { EventsPage } from "./list"
 import { ReducerExercise2 } from "./reducer-exercise2"
+import { Todos } from "./todo/TodoList"
 import { TrafficLight } from "./traffic-light"
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 <FilterUserList />
             </ThemeContextProvider>
             <Lexical />
+            <Todos />
         </div>
     )
 }
