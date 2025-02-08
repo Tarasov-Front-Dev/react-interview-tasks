@@ -1,4 +1,4 @@
-import { RenderProp } from "./patterns-react/render-prop/RenderProp"
+import { AccordionPage } from "./patterns-react/accordion/accordion-page"
 
 function App() {
     // const fn = () => console.log(new Date(Date.now()).getSeconds())
@@ -30,7 +30,8 @@ function App() {
             </ThemeContextProvider>
             <Lexical />
             <Todos /> */}
-            <RenderProp />
+            {/* <RenderProp /> */}
+            <AccordionPage />
         </div>
     )
 }
