@@ -1,4 +1,4 @@
-import { AccordionPage } from "./patterns-react/accordion/accordion-page"
+import { AccordionPage } from "pages"
 
 function App() {
     // const fn = () => console.log(new Date(Date.now()).getSeconds())

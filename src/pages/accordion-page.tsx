@@ -1,5 +1,5 @@
+import { Accordion } from "components/accordion"
 import { useState } from "react"
-import { Accordion } from "./Accordion"
 
 export const AccordionPage = () => {
     const [currIndex, setCurrIndex] = useState(-1)
