@@ -1,4 +1,4 @@
-import { AccordionPage } from "pages"
+import { RecoilApp } from "./recoil/recoil-app"
 
 function App() {
     // const fn = () => console.log(new Date(Date.now()).getSeconds())
@@ -31,7 +31,8 @@ function App() {
             <Lexical />
             <Todos /> */}
             {/* <RenderProp /> */}
-            <AccordionPage />
+            {/* <AccordionPage /> */}
+            <RecoilApp />
         </div>
     )
 }
