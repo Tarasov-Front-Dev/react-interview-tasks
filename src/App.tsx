@@ -1,4 +1,4 @@
-import { RecoilApp } from "./recoil/recoil-app"
+import { RecoilApp, RetryFunction } from "components"
 
 function App() {
     // const fn = (text: string, retries?: number) => console.log(new Date(Date.now()).getSeconds(), text, 'retries:', retries)
@@ -9,6 +9,7 @@ function App() {
 
     return (
         <div className="px-8">
+            <RetryFunction />
             {/* <TrafficLight />
             <div className="mb-4 flex max-w-fit flex-col gap-4 p-4">
                 <button className="rounded-xl border bg-purple-600 px-4 py-2 text-lg font-bold text-neutral-50 transition-all active:bg-purple-700" onClick={() => throttledFn('throttled', ++retries)}>
