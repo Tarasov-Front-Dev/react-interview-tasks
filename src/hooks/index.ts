@@ -1,2 +1,2 @@
+export * from './use-throttle'
 export * from './useDebauncer'
-export * from './useThrottle'
